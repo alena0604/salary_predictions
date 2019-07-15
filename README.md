@@ -8,7 +8,7 @@ The goal is to predict the salary of a job postings based on the given informati
 Summarize the data in a meaningful way.
 - Identify patterns and outliers.
 - Examine the distribution of the variable and relationship between features. 
-- Exploratory analysis showed on which fields have a greater influence on salaries and how they may be related.
+- Exploratory analysis of features and their influence on salaries.
 
 ## 2. Clean the data and generate new features
 - Remove rows where salary=0
