@@ -50,4 +50,3 @@ class DataProcessing:
         print(df.describe(include=[np.number]))
         print('\n{0:*^80}\n'.format(' Description of categorical columns'))
         print(df.describe(include=['O']))
-
