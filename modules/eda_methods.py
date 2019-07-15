@@ -13,7 +13,7 @@ class Visualisation:
         self.target = data.target
 
     def plot_relationships(self, df, col, target, hue=None):
-        '''create a plot to see relationship between target and variables'''
+        '''creates a plot to see relationship between target and variables'''
         if df[col].dtype == 'int64':
             sns.lineplot(x=col, y=target, hue=hue, data=df, palette=self.palette)
         else:
@@ -22,7 +22,7 @@ class Visualisation:
                         palette=self.palette)
 
     def two_way_table(self, df, col, target, margins=True):
-        '''create a table to see relationship between two numerical variables'''
+        '''creates a table to see relationship between two numerical variables'''
         table = pd.crosstab(df[col], df[target], margins=margins, margins_name="Total")
         return table
 

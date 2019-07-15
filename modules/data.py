@@ -4,7 +4,7 @@ import numpy as np
 
 class DataProcessing:
     def __init__(self, train_feature_file, train_target_file, test_feature_file, target, id_cols):
-        '''create train and test dataframe'''
+        '''creates train and test dataframe'''
         self.id_cols = list(id_cols)
         self.target = target
         self.train_df = self._get_train_df(train_feature_file, train_target_file)
@@ -12,14 +12,14 @@ class DataProcessing:
         self.test_train_df = self._get_concat_dfs(train_feature_file, test_feature_file)
 
     def _get_train_df(self, train_feature_file, train_target_file):
-        '''load and merge training data'''
+        '''loads and merges training data'''
         train_feature_df = self._load_data(train_feature_file)
         train_target_df = self._load_data(train_target_file)
         train_df = self._merge_dfs(train_feature_df, train_target_df)
         return train_df
 
     def _get_test_df(self, test_feature_file):
-        '''load test data'''
+        '''loads test data'''
         test_df = self._load_data(test_feature_file)
         return test_df
 
@@ -40,7 +40,7 @@ class DataProcessing:
         return concat_df
 
     def dataset_info(self, file):
-        '''print main information'''
+        '''prints main information'''
         df = self._load_data(file)
         print('\n{0:*^80}'.format(' Reading from the file {0} '.format(file)))
         print("\nit has {0} rows and {1} columns".format(*df.shape))
